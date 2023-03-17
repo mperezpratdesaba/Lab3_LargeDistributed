@@ -1,3 +1,11 @@
-
 MastodonWindowExample:
-C:\Users\Usuario\Desktop\UNI\3r\2nTrimestre\Large Distributed Systems\labs\lab3\lab3-mastodon>spark-submit --class edu.upf.MastodonWindowExample --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:log4j.properties target\lab3-mastodon-1.0-SNAPSHOT.jar
+spark-submit --class edu.upf.MastodonWindowExample --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:log4j.properties target\lab3-mastodon-1.0-SNAPSHOT.jar
+
+MastodonStateless:
+spark-submit --class edu.upf.MastodonStateless --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:log4j.properties target\lab3-mastodon-1.0-SNAPSHOT.jar src\main\resources\map.tsv
+
+MastodonWindows:
+spark-submit --class edu.upf.MastodonWindows --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:log4j.properties target\lab3-mastodon-1.0-SNAPSHOT.jar src\main\resources\map.tsv
+
+MastodonWithState:
+spark-submit --class edu.upf.MastodonWithState --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:log4j.properties target\lab3-mastodon-1.0-SNAPSHOT.jar en

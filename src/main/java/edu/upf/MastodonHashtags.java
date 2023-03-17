@@ -15,7 +15,7 @@ public class MastodonHashtags {
     public static void main(String[] args) throws InterruptedException {
         SparkConf conf = new SparkConf().setAppName("Real-time Mastodon Hashtags");
         AppConfig appConfig = AppConfig.getConfig();
-        StreamingContext sc = new StreamingContext(conf, Durations.seconds(10));
+        StreamingContext sc = new StreamingContext(conf, Durations.seconds(10)); //Processed in 10 second batches
         JavaStreamingContext jsc = new JavaStreamingContext(sc);
         jsc.checkpoint("/tmp/checkpoint");
 
